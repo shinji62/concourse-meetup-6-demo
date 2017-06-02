@@ -1,0 +1,20 @@
+---
+jobs:
+- name: run-curl
+  serial: true
+  public: true
+  plan:
+  - get: concourse-meetup-6-demo
+    trigger: true
+  - task: run-curl
+    file: concourse-meetup-6-demo/ci/curl/curl.yml
+
+
+resources:
+- name: concourse-meetup-6-demo
+  type: git
+  check_every: 600h
+  source:
+    uri: git@github.com:shinji62/concourse-meetup-6-demo.git
+    branch: master
+    private_key: {{private-key-github-concourse}}
