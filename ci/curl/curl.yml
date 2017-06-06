@@ -14,4 +14,4 @@ run:
   - -exc
   - |
     uname -a
-    curl -vvv www.google.com --http2
+    curl -vvv www.cloudfare.com --http2
