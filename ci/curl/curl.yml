@@ -14,4 +14,4 @@ run:
   - -exc
   - |
     uname -a
-    curl -vvv www.yahoo.co.jp --http2
+    curl -vvv www.cloudfare.com --http2
